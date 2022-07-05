@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "889517178995",
+    "project_id": "library-app-f8d73",
+    "storage_bucket": "library-app-f8d73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889517178995:android:0a83f20f4cf829dfdb6a06",
+        "android_client_info": {
+          "package_name": "com.rudragoyal.library_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889517178995-41ukm534lajjt5d3osav2fgn52o6j87l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rudragoyal.library_app",
+            "certificate_hash": "2af188cd79a55025a5bcb3892174baaa8ec071ff"
+          }
+        },
+        {
+          "client_id": "889517178995-jfka76gvk0pa3phpu55tgmc76barkeod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdwWDh-ElTIkc9AL5Dv7T9omd7jYs2LJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889517178995-jfka76gvk0pa3phpu55tgmc76barkeod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
