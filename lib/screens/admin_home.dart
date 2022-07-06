@@ -1,9 +1,12 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:library_app/screens/add_book.dart';
 import 'package:library_app/screens/edit_book.dart';
 import 'package:library_app/services/database.dart';
 import 'package:library_app/services/google_signin.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class AdminHome extends StatefulWidget {
   @override
@@ -14,6 +17,8 @@ class _AdminHomeState extends State<AdminHome> {
   AuthService auth = AuthService();
 
   DatabaseService service = DatabaseService();
+  FirebaseFirestore db = FirebaseFirestore.instance;
+  var settings;
 
   var collection = FirebaseFirestore.instance.collection('books');
 
@@ -27,6 +32,7 @@ class _AdminHomeState extends State<AdminHome> {
 
   @override
   Widget build(BuildContext context) {
+    db.settings.persistenceEnabled;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple[400],
@@ -62,6 +68,9 @@ class _AdminHomeState extends State<AdminHome> {
                   issued = mapOfData['isIssued'] ? 'Issued' : 'Available';
 
                   return Card(
+                    color: listOfSnapshots[index]['isIssued']
+                        ? Colors.red[200]
+                        : Colors.green[300],
                     elevation: 2.0,
                     child: ListTile(
                         title: Text(

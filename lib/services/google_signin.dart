@@ -19,7 +19,7 @@ class AuthService {
       UserCredential result = await auth.signInWithCredential(credential);
       User? user = result.user;
       if (user != null) {
-        Navigator.pushReplacementNamed(context, '/home');
+        Navigator.pushReplacementNamed(context, '/userHome');
         print(user.displayName);
       }
     }

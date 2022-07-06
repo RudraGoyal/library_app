@@ -62,7 +62,9 @@ class _AddBookState extends State<AddBook> {
                     title: title,
                     author: author,
                     bookId: 'default',
-                    isIssued: false);
+                    isIssued: false,
+                    issuedBy: '');
+
                 dbService.addNewBook(newBook);
 
                 Navigator.pop(context);

@@ -13,6 +13,7 @@ class DatabaseService {
       'author': newBookModel.author,
       'bookId': newBookModel.bookId,
       'isIssued': newBookModel.isIssued,
+      'issuedBy': newBookModel.issuedBy,
     });
     await bookCollection.doc(id.id).update({'bookId': id.id});
     print('added');

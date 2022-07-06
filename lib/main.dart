@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:library_app/screens/admin_home.dart';
 import 'package:library_app/screens/home.dart';
 import 'package:library_app/screens/login_screen.dart';
+import 'package:library_app/screens/user_home.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const LoginScreen(),
         '/home': (context) => Home(),
         '/admin': (context) => AdminHome(),
+        '/userHome': (context) => UserHome()
       },
     );
   }

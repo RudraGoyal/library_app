@@ -59,10 +59,10 @@ class _EditBookState extends State<EditBook> {
             ),
             RaisedButton(
               onPressed: () async {
+                Navigator.pop(context);
                 await collection
                     .doc(currentBookId)
                     .update({'title': newTitle, 'author': newAuthor});
-                Navigator.pop(context);
               },
               child: const Text(
                 'Save Changes',

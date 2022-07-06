@@ -1,3 +1,5 @@
+import 'package:auth/auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:library_app/services/database.dart';
 import 'package:library_app/services/google_signin.dart';
@@ -10,12 +12,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   AuthService auth = AuthService();
+  var user = FirebaseAuth.instance.currentUser;
 
   DatabaseService service = DatabaseService();
 
   var collection = FirebaseFirestore.instance.collection('books');
-
-  var querySnapshot;
 
   late List listOfSnapshots;
 
@@ -70,6 +71,7 @@ class _HomeState extends State<Home> {
                       trailing: Checkbox(
                         value: val = listOfSnapshots[index].data()['isIssued'],
                         onChanged: (value) async {
+                          print(user!.uid);
                           await collection
                               .doc(listOfSnapshots[index].data()['bookId'])
                               .update(
